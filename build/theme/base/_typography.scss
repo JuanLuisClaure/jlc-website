@@ -6,7 +6,7 @@
 
 // Body
 body {
-  font-family: $base-font-family;
+  font-family: ultraLight;
   @include font-size($base-font-size);
   @include line-height($base-line-height);
   color: $base-font-color;
@@ -32,7 +32,7 @@ a {
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
-  font-family: $base-heading-font-family;
+  font-family: ultraLight ;
   margin: 0;
 }
 h1, .fs-1 {

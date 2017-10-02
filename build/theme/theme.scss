@@ -55,12 +55,7 @@ $white:           #fefefe;
 };
 
 
-@include fontFace(superBold, "../assets/fonts/Montserrat-Black");
-@include fontFace(Bold, "../assets/fonts/Montserrat-Bold");
-@include fontFace(extraBold, "../assets/fonts/Montserrat-ExtraBold");
-@include fontFace(light, "../assets/fonts/Montserrat-Light");
-@include fontFace(regular, "../assets/fonts/Montserrat-Regular");
-@include fontFace(semiBold , "../assets/fonts/Montserrat-SemiBold");
+
 @include fontFace(ultraLight , "../assets/fonts/Montserrat-UltraLight");
 
 
@@ -89,11 +84,14 @@ $white:           #fefefe;
   top: 25px;
   left: 400px;
 }
-#canvas{
-  background-color: rgb(0, 48, 51);
+#myCanvas{
+  background-color: #5083c0;
 }
+
+
+
 .img-0{
-  background-color: rgb(50, 0, 255)!important;
+  background-color: rgb(88, 156, 173)!important;
 }
 .img-1{
 
@@ -229,11 +227,6 @@ background-position: center;
 // import from componentes and pages
 // --------------------------------------------------
 
-.h1{
-  color: $cloudbit;
-  font-family:Bold;
-  font-size: 3em;
-}
 @import "./base";
 @import "./offline";
 @import "./animista";

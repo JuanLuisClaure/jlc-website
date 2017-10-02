@@ -1,3 +1,40 @@
 const riot = require('riot')
-riot.tag2('componente-dos', '<div class="demo-card-wide mdl-card mdl-shadow--2dp"> <div class="mdl-card__title" riot-style="{opts.datos.img[0].contenido}"> <h2 class="mdl-card__title-text">{opts.datos.titulo[0].contenido}</h2> </div> <div class="mdl-card__supporting-text"> {opts.datos.texto[0].contenido} </div> <div class="mdl-card__actions mdl-card--border"> <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"> {opts.datos.texto[1].contenido} </a> </div> <div class="mdl-card__menu"> <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"> <i class="material-icons">{opts.datos.svg[0].contenido}</i> </button> </div> </div>', 'componente-dos .demo-card-wide.mdl-card,[data-is="componente-dos"] .demo-card-wide.mdl-card{ width: 100%; } componente-dos .demo-card-wide > .mdl-card__title,[data-is="componente-dos"] .demo-card-wide > .mdl-card__title{ color: #fff; height: 176px; } componente-dos .demo-card-wide > .mdl-card__menu,[data-is="componente-dos"] .demo-card-wide > .mdl-card__menu{ color: #fff; }', '', function(opts) {
+
+riot.tag2('componente-dos', '', '', '', function(opts) {
+const tag = this
+
+function animate1() {
+
+  let el = document.getElementById('unico')
+  console.log(el);
+  const typewriter = new Typewriter(el, {
+      autoStart:true
+  });
+  console.log(typewriter);
+  typewriter.typeString('Hello World!')
+      .pauseFor(2500)
+      .deleteAll()
+      .typeString('Strings can be removed')
+      .pauseFor(2500)
+      .deleteChars(7)
+      .typeString('altered!')
+      .start();
+
+}
+
+function animate2(el) {
+  dynamics.animate(el, {
+  translateX: 350,
+  scale: 2,
+  opacity: 0.5
+}, {
+  type: dynamics.spring,
+  frequency: 200,
+  friction: 200,
+  duration: 1500
+})
+}
+
+tag.on('mount' , animate1)
+
 });
